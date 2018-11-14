@@ -11,13 +11,15 @@ mkdir -p registry gitbucket registry/auth
 docker run --entrypoint htpasswd registry:2 -Bbn ENTER-YOUR-ACCOUNT ENTER-YOUR-PASSWORD > registry/auth/htpasswd
 ```
 1. open '.env' and replace host and email
-    # Your Email Address
-    LETSENCRYPT_EMAIL=ENTER-YOUR-EMAIL-HERE
-     
-    # Your Gitbucket Host
-    GITBUCKET_DOMAIN=ENTER-YOUR-GITBUCKET-HOST-HERE
-     
-    # Your Docker Registry Host
-    DOCKER_REGISTRY_DOMAIN=ENTER-YOUR-REGISTRY-HOST-HERE
+```
+# Your Email Address
+LETSENCRYPT_EMAIL=ENTER-YOUR-EMAIL-HERE
+
+# Your Gitbucket Host
+GITBUCKET_DOMAIN=ENTER-YOUR-GITBUCKET-HOST-HERE
+
+# Your Docker Registry Host
+DOCKER_REGISTRY_DOMAIN=ENTER-YOUR-REGISTRY-HOST-HERE
+```
 1. Start containers
 ```docker-compose up -d```
