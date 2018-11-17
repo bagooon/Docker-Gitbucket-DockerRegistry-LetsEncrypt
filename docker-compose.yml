@@ -38,6 +38,7 @@ services:
     volumes:
       - ./gitbucket/repositories:/gitbucket/repositories
       - ./gitbucket/data:/gitbucket/data
+      - ./gitbucket/plugins:/gitbucket/plugins
     restart: always
 
   db:
