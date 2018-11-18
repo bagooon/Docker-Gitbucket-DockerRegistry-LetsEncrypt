@@ -36,6 +36,7 @@ services:
       LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
       LETSENCRYPT_TEST: "false"
     volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./gitbucket/repositories:/gitbucket/repositories
       - ./gitbucket/data:/gitbucket/data
       - ./gitbucket/plugins:/gitbucket/plugins
